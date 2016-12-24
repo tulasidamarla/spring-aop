@@ -36,7 +36,7 @@ We need to annotate the class using @Aspect and also @Component be recognized as
 return_type method_name(arguments)
 
 For ex, if we want to implement this for all methods, the pointcut expression is,
- * *(..) --> The wildcard to accept all for both return type and method name is *, but for arguments it is '..' .
+  ** *(..) --> The wildcard to accept all for both return type and method name is *, but for arguments it is '..' .
 
 There is a problem with the above aspect. The method startLog() prints the log message but it did not say which method it actually entered. We can use joinpoint for this.
 
