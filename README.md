@@ -31,6 +31,8 @@ public class TracingAspect{
 
 We need to annotate the class using @Aspect and also @Component be recognized as spring bean.
 
+Note: Aspect annotation is available with aspectj library, not from sping. we need aspectjrt and aspectjweaver dependencies for this to work.
+
 @Before annotation is spring annotation to apply before a method execution. pointcut expression inside is, void dosomething() . The original syntax is:
 
 return_type method_name(arguments)
