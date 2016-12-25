@@ -14,15 +14,18 @@ public class CustomerServiceImpl implements CustomerService {
 	@Autowired
 	private CustomerRepository customerRepository;
 	
-	
 	@Override
 	public List<Customer> getCustomers(){
+		//Uncomment this code to test for @After and @AfterThrowing demo 
+		/*if(true){
+			throw new RuntimeException("test exception");
+		}*/
+		
 		return customerRepository.findAll();
 	}
 
 	public void setCustomerRepository(CustomerRepository repository) {
 		this.customerRepository = repository;
-		
 	}
 
 }
