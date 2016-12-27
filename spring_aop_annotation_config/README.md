@@ -47,6 +47,7 @@ To achieve all the above, AroundAdvice is given the current method call using Pr
 This is an extension of JoinPoint. It allows the advice to proceed with the target method using proceed() method. If advice method doesn't call proceed, then target method will not be invoked.
 
 Here is the sample method:
+
 	@Around("execution(* getCustomers())")
 	public Object aroundMethod(ProceedingJoinPoint pjp){
 		logger.info("around method start " + pjp.getStaticPart().getSignature().toString());
