@@ -2,12 +2,12 @@ Pointcut defines where an aspect can be added in the code.
 
 The signature of the Pointcut is as follows.
 
-pointcut_type(declaration). For ex,
+pointcut_type(Declaration). For ex,
 
 execution(void getCustomer()) 
 
-execution is the type of pointcut. i.e. Method execution
-declaration for the execution pointcut signature contains 3 parts. 
+execution is the type of pointcut. i.e. Method execution. <br/>
+Declaration signature contains 3 parts. 
 
 1)return type
 2)method name
