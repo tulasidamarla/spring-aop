@@ -9,24 +9,20 @@ Cross cutting concerns
 ----------------------
 Transactions , Exception handling, logging are called cross cutting concerns because a lot of classes and methods must implement them, means they actually cut through the code. It means Aspect is nothing but an implementation of a cross cutting concern. So, an Aspect contains two things. Where it should be applied(pointcut) and what should be implemented(advice).
 
-If you are developing an application, first implement the business logic, then write aspects for cross cutting concerns or you can use some of the aspects that spring is already providing.
+If you are developing an application, first implement the business logic, then write aspects for cross cutting concerns of your own or you can implement using the advices spring is providing.
 
 you can use Spirng AOP or aspectj to weave aspects in to the application.
 
 Here is an example for log tracing aspect.
 
 @Component
-
 @Aspect
-
 public class TracingAspect{
 	Logger logger = Logger.getLogger(TracingAspect.class);
-	
 	@Before("execution(void dosomething())")
 	public void startLog(){
 		logger.trace("entering the method");
 	}
-
 }
 
 We need to annotate the class using @Aspect and also @Component be recognized as spring bean.
