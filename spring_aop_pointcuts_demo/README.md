@@ -84,7 +84,7 @@ execution(* com.springsample..*Service(..) || execution(* com.springsample..*Rep
 
 Reusing Pointcuts
 -----------------
-If same pointcut needs to be repeated multiple times, then we can write a class like this with the pointcut like this.
+If same pointcut needs to be repeated multiple times, then we can write an empty method in a class with the pointcut like this.
 
 	package com.springsample.pointcuts;
 	import org.aspectj.lang.annotation.Pointcut;
