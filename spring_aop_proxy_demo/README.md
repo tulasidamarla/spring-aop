@@ -4,7 +4,7 @@ There are two ways proxies are implemented.
 Dynamic proxies using JDK feature if the class implements an interface.
 CGLIB generated subclasses.
 
-when other spring beans calls the original objects, it is the proxy which is actually getting invoked. This proxy will call the advice method first followed by the target method.
+when other spring beans call the original object, it is the proxy which is actually getting invoked. This proxy will call the advice method first followed by the target method.
 
 Note:
 If one method calls another method(supposed to be advised) inside the same class then the called method is not advised, because method call never reaches the proxy and therefore never the advice.
