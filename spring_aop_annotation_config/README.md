@@ -1,7 +1,5 @@
-For AOP configuration in java, app config java class needs to be annotated with @EnableAspectJAutoProxy.
-
-Note: All other configuration of log4j, aspecjrt, aspecjweaver dependencies have to be added in pom.xml file. 
-
+For AOP configuration in java, app config java class needs to be annotated with @EnableAspectJAutoProxy.<br>
+Note: All other configuration of log4j, aspecjrt, aspecjweaver dependencies have to be added in pom.xml file. <br>
 Spring supports the following type of advices out of the box.
 
 @Before 
@@ -34,7 +32,6 @@ Executed if the target method returns successfully. We can't change the result o
 
 @Around
 -------
-
 Around advice wraps around the method. i.e it is called before and after the target method execution. 
 
 This is the only advice can prevent the target method being called. Before advice can prevent but an exception is thrown and it will be propagated back to the caller.
@@ -63,13 +60,12 @@ Here is the sample method:
 	}
 
 Note: Unlike other advices, the Around advice should have a return type.
-
 If all the advices are used against one target method, then the order of execution as follows.
 
-@Around
-@Before
-Method execution
-@Around
-@After
-@AfterThrowing
-@AfterReturning
+	@Around
+	@Before
+	Method execution
+	@Around
+	@After
+	@AfterThrowing
+	@AfterReturning
