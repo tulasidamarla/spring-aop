@@ -15,15 +15,15 @@ you can use Spirng AOP or aspectj to weave aspects in to the application.
 
 Here is an example for log tracing aspect.
 
-@Component
-@Aspect
-public class TracingAspect{
-	Logger logger = Logger.getLogger(TracingAspect.class);
-	@Before("execution(void dosomething())")
-	public void startLog(){
-		logger.trace("entering the method");
+	@Component
+	@Aspect
+	public class TracingAspect{
+		Logger logger = Logger.getLogger(TracingAspect.class);
+		@Before("execution(void dosomething())")
+		public void startLog(){
+			logger.trace("entering the method");
+		}
 	}
-}
 
 We need to annotate the class using @Aspect and also @Component be recognized as spring bean.
 
